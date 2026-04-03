@@ -1,0 +1,31 @@
+@model MapsterSample.Models.PersonDto
+
+@{
+    ViewBag.Title = "Person Details";
+}
+
+<h2>Person Information</h2>
+
+<div class="form-group">
+    <label>Title:</label>
+    <p>@Model.Title</p>
+</div>
+
+<div class="form-group">
+    <label>First Name:</label>
+    <p>@Model.FirstName</p>
+</div>
+
+<div class="form-group">
+    <label>Last Name:</label>
+    <p>@Model.LastName</p>
+</div>
+
+<div class="form-group">
+    <label>Date of Birth:</label>
+    <p>@(Model.DateOfBirth?.ToString("yyyy-MM-dd") ?? "N/A")</p>
+</div>
+
+<div>
+    @Html.ActionLink("Back to Home", "Index", "Home", new { @class = "btn btn-primary" })
+</div>
